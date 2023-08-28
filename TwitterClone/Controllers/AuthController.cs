@@ -14,7 +14,8 @@ namespace TwitterClone.Controllers
     {
         public static User user = new User();
         private readonly IConfiguration _configuration;
-
+        public bool isLoggedIn = false;
+        public bool isSignIn = true;
         public AuthController(IConfiguration configuration)
         {
             _configuration = configuration;
@@ -84,4 +85,7 @@ namespace TwitterClone.Controllers
         }
 
     }
+
+
+
 }

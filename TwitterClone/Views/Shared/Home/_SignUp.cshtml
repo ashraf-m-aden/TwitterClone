@@ -16,7 +16,7 @@
         <div class="mb-3 d-flex flex-column">
             <button type="submit" class="btn btn-primary mb-3">S'enregistrer'</button>
             <div>
-                Vous avez déja un compte?  <a class="inline" asp-controller="Authentication" asp-action="SigIn">Connectez-vous ici</a>.
+                Vous avez déja un compte?  <a class="inline" asp-controller="Home" asp-action="Index" asp-route-isSignIn=true >Connectez-vous ici</a>.
             </div>
         </div>
     </form>
