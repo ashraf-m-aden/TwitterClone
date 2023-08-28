@@ -1,0 +1,35 @@
+.center {
+    &-parent {
+        position: relative;
+    }
+
+    &-child {
+        /* Center vertically and horizontally */
+        position: absolute;
+        top: 30%;
+        left: 50%;
+    }
+}
+
+.row {
+    height: 90vh;
+}
+
+.auth {
+    &-wrapper {
+        padding: 20px;
+        margin: auto;
+        top: 20%;
+        display: flex;
+        justify-content:space-around
+    }
+
+    &-form {
+        width: 50%;
+        border-left:solid 1px;
+        padding: 15px;
+    }
+
+    &-logo {
+    }
+}

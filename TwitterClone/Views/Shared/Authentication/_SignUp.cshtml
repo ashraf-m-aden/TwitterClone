@@ -1,0 +1,23 @@
+﻿@model UserDto
+<div>
+    <h2>Enregistrez vous</h2>
+    <p>Veuillez vous enregistrer en fournissant votre addresse email, votre nom et votre mot de passe.</p>
+    <form method="post">
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" class="form-control" id="Email" aria-describedby="Email">
+        </div>
+        <div class="mb-5">
+            <label asp-for="Password" class="form-label">Mot de Passe</label>
+            <input asp-for="Password" class="form-control" id="Password" aria-describedby="Password">
+        </div>
+
+
+        <div class="mb-3 d-flex flex-column">
+            <button type="submit" class="btn btn-primary mb-3">S'enregistrer'</button>
+            <div>
+                Vous avez déja un compte?  <a class="inline" asp-controller="Authentication" asp-action="SigIn">Connectez-vous ici</a>.
+            </div>
+        </div>
+    </form>
+</div>

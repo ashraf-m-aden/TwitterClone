@@ -1,0 +1,22 @@
+﻿@model UserDto
+<div>
+    <h2>Connection</h2>
+    <p>Veuillez vous connectez en utilisant vos identifiants, email et mot de passe</p>
+    <form method="post">
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" class="form-control" id="Email" aria-describedby="Email">
+        </div>
+        <div class="mb-5">
+            <label asp-for="Password" class="form-label">Mot de Passe</label>
+            <input asp-for="Password" class="form-control" id="Password" aria-describedby="Password">
+        </div>
+
+        <div class="mb-3 d-flex flex-column">
+            <button type="submit" class="btn btn-primary mb-3">Se connecter</button>
+            <div>
+                Vous n'avez pas de compte? Vous pouvez vous <a class="inline" asp-controller="Authentication" asp-action="SignUp">enregistrer ici</a>.
+            </div>
+        </div>
+    </form>
+</div>
