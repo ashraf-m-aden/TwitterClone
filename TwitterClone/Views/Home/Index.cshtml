@@ -1,8 +1,32 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model GeneralViewModel
+@{
+    Layout = "~/Views/Shared/_blank.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 auth-wrapper border">
+            <div class="auth-logo">
+                <img src="~/img/twit.png" alt="" srcset="">
+            </div>
+            <div class="auth-form">
+                @if (Model.connectionState.IsSignIn)
+                {
+                  
+                            <partial name="Home/_SignIn" model="Model.userDto" />
+               
+                }
+                else
+                {
+
+                    <partial name="Home/_SignUp" model="Model.userDto" />
+                
+                }
+
+
+            </div>
+        </div>
+    </div>
 </div>
+
+
