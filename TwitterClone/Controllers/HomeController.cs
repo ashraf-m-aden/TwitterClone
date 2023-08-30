@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Configuration;
 using System.Diagnostics;
 using System.Dynamic;
 using TwitterClone.Models;
@@ -10,9 +11,13 @@ namespace TwitterClone.Controllers
         private readonly ILogger<HomeController> _logger;
         private GeneralViewModel _generalViewModel = new GeneralViewModel();
         private ConnectionState _state;
+        private AuthController _authController;
+        private IConfiguration _configuration;
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            _authController = new AuthController(_configuration);
         }
 
    
@@ -45,15 +50,18 @@ namespace TwitterClone.Controllers
             return View(_generalViewModel);
 
         }
-
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult Index(UserDto user)
         {
+            if (user.Email is not null && user.Password is not null)
+            {
+                return RedirectToAction("Index", "Home",new {area="Tweets"});
+            }
             return View();
         }
 
-        public IActionResult SignUpForm()
+        public IActionResult SignUpForm(UserDto user)
         {
-
 
 
             return RedirectToAction("Index");
