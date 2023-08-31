@@ -1,0 +1,13 @@
+﻿sidebar {
+    border: solid 10px black;
+}
+
+sidebar-list {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+sidebar-list-item .logo {
+    width: 30px;
+}

@@ -2,7 +2,7 @@
 
 namespace TwitterClone.Areas.Tweets.ViewComponents
 {
-    public class SidebarRightViewComponent : ViewComponent
+    public class SidebarLeftViewComponent : ViewComponent
     {
 
       public async Task<IViewComponentResult> InvokeAsync()

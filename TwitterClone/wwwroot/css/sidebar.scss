@@ -1,0 +1,26 @@
+﻿.sidebar {
+
+    &-list {
+        list-style: none;
+        padding-left:100px;
+        &-item {
+            font-weight:600;
+            font-size: 30px;
+
+            &:not(:last-child){
+                margin-bottom:20px
+            }
+            .logo {
+                width: 10%
+            }
+        }
+    }
+
+    &-btn {
+        border: solid 1px black;
+        width: 50%;
+        margin-top: 50px;
+        border-radius: 10px;
+        text-align: center;
+    }
+}

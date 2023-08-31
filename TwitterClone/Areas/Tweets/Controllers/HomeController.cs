@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace TwitterClone.Areas.Tweets.Controllers
 {
@@ -7,6 +6,7 @@ namespace TwitterClone.Areas.Tweets.Controllers
     public class HomeController : Controller
     {
         // GET: HomeController
+        [Route("/")]
         public ActionResult Index()
         {
             return View();

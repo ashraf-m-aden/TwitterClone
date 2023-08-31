@@ -1,5 +1,4 @@
-﻿@model GeneralViewModel
-@{
+﻿@{
     Layout = "~/Views/Shared/_blank.cshtml";
 }
 
@@ -10,7 +9,7 @@
                 <img src="~/img/twit.png" alt="" srcset="">
             </div>
             <div class="auth-form">
-                @if (Model.connectionState.IsSignIn)
+            @*     @if (Model.connectionState.IsSignIn)
                 {
                   
                             <partial name="Home/_SignIn" model="Model.userDto" />
@@ -22,7 +21,7 @@
                     <partial name="Home/_SignUp" model="Model.userDto" />
                 
                 }
-
+ *@
 
             </div>
         </div>

@@ -1,10 +1,13 @@
 ﻿[
-
   {
     "outputFile": "wwwroot/css/components.css",
     "inputFile": "wwwroot/css/components.scss",
     "minify": {
       "enabled": false
     }
+  },
+  {
+    "outputFile": "wwwroot/css/sidebar.css",
+    "inputFile": "wwwroot/css/sidebar.scss"
   }
 ]
