@@ -9,5 +9,9 @@
   {
     "outputFile": "wwwroot/css/sidebar.css",
     "inputFile": "wwwroot/css/sidebar.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/acceuil.css",
+    "inputFile": "wwwroot/css/acceuil.scss"
   }
 ]

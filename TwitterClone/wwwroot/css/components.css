@@ -24,16 +24,3 @@
   border-left: solid 1px;
   padding: 15px;
 }
-sidebar {
-    border: solid 10px black;
-}
-
-sidebar-list {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-sidebar-list-item .logo {
-    width: 30px;
-}
