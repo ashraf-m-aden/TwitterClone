@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="~/css/sidebar.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/acceuil.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TwitterClone.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
 </head>
 <body>
     <header>
 
     </header>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-3 sidebar">
                 <partial name="./Partials/_SidebarLeft.cshtml"/>
@@ -29,19 +30,23 @@
             </div>
 
             <div class="col-3 sidebar_right">
-                @await RenderSectionAsync("Scripts", required: false)
+                    <partial name="./Partials/_SidebarLeft.cshtml" />
 
             </div>
 
         </div>
-        
-    </div>
-
-    <footer class="border-top footer text-muted footer fixed-bottom">
-        <div class="container">
-            &copy; 2023 - TwitterClone -
+   @*      <div class="row">
+            <div class="col-12">
+                <footer class="border-top footer   text-muted">
+                    <div class="container">
+                        &copy; 2023 - TwitterClone -
+                    </div>
+                </footer>
+            </div>
         </div>
-    </footer>
+    </div> *@
+
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

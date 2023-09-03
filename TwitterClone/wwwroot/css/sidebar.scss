@@ -2,16 +2,18 @@
 
     &-list {
         list-style: none;
-        padding-left:100px;
+        padding-left: 100px;
+
         &-item {
-            font-weight:600;
+            font-weight: 600;
             font-size: 30px;
 
-            &:not(:last-child){
-                margin-bottom:20px
+            &:not(:last-child) {
+                margin-bottom: 20px
             }
+
             .logo {
-                width: 10%
+                height: 70px;
             }
         }
     }

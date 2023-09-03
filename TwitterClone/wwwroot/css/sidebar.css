@@ -1,17 +1,21 @@
 ﻿.sidebar-list {
   list-style: none;
-  padding-left: 100px; }
-  .sidebar-list-item {
-    font-weight: 600;
-    font-size: 30px; }
-    .sidebar-list-item:not(:last-child) {
-      margin-bottom: 20px; }
-    .sidebar-list-item .logo {
-      width: 10%; }
-
+  padding-left: 100px;
+}
+.sidebar-list-item {
+  font-weight: 600;
+  font-size: 30px;
+}
+.sidebar-list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.sidebar-list-item .logo {
+  height: 70px;
+}
 .sidebar-btn {
   border: solid 1px black;
   width: 50%;
   margin-top: 50px;
   border-radius: 10px;
-  text-align: center; }
+  text-align: center;
+}

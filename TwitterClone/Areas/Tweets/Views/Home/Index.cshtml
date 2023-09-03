@@ -10,8 +10,14 @@
         <div class="col-12">
             <partial name="./Partials/_MakeTweet.cshtml" />
         </div>
-        <div class="col-12">
-            <partial name="./Partials/_Tweet.cshtml" />
-        </div>
+            @for(int i = 0; i < 5; i++)
+
+        {
+                    <div class="col-12">
+
+                <partial name="./Partials/_Tweet.cshtml" />
+            </div>
+
+            }
     </div>
 </div>

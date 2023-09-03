@@ -1,35 +1,61 @@
 ﻿.home {
     &-wrapper {
-        border-left: solid 1px black;
-        border-right: solid 1px black;
+        border-left: solid 1px rgb(178, 174, 174, 0.25);
+        
+        border-right: solid 1px rgb(178, 174, 174, 0.25);
+        height: 100vh;
     }
 }
 .make-tweet {
     margin-top: 20px;
     padding: 15px;
     justify-content: space-around;
-    border-bottom: groove  1px black;
+    border-bottom: groove 1px;
+    border-color: rgb(178, 174, 174, 0.25);
+
     &-profile {
-        width: 10%;
+        width: 70px;
         display: inline;
     }
 
     &-content {
-        width: 70%;
+        &-wrapper{
+            width:100px;
+            border: solid 1px black;
+        }
+        min-width: 100%;
         display: inline;
         border: none;
         padding: 10px;
-        overflow-wrap: break-word;
+        overflow: hidden;
+        resize: both;
+        min-height: 40px;
+        line-height: 20px;
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            caret-color: #fff;
+        }
 
         &:focus {
-            border: none;
+            outline: none;
+            caret-color: red;
         }
 
         &:hover {
-            border:none;
+            outline: none;
+            cursor: text;
         }
-        &:active{
-            border:none;
+
+
+
+        &[contenteditable]:empty::before {
+            content: "Quoi de neuf??";
+            color: gray;
+            border: none;
+            outline: none;
         }
     }
 
@@ -39,12 +65,112 @@
     }
 }
 
-.tweet{
+.tweet {
+    border-bottom: groove 1px;
+    border-color: rgb(178, 174, 174, 0.25);
 
-    &-info{}
-    &-content{}
-    &-media{}
-    &-details{
+    &-wrapper {
+        display: flex;
+        justify-content: left;
+        padding: 20px;
 
+        &:hover {
+            background-color: darkgray;
+        }
+    }
+
+    &-make-wrapper {
+        display: flex;
+        justify-content: left;
+        padding: 20px;
+
+        &:hover {
+            background-color: darkgray;
+        }
+    }
+
+    &-profile {
+
+        &-img {
+            height: 70px;
+            border-radius: 50%;
+        }
+    }
+
+    &-content {
+
+        &-info {
+            margin-bottom: 10px;
+        }
+
+        &-text {
+            min-width: 100%;
+            display: inline;
+            padding: 10px;
+            overflow: hidden;
+            resize: both;
+            min-height: 40px;
+            line-height: 20px;
+
+
+
+            &:focus {
+                outline: none;
+                caret-color: red;
+            }
+
+            &:hover {
+                outline: none;
+                cursor: text;
+            }
+
+
+            &[contenteditable]:empty::before {
+                content: "Quoi de neuf??";
+                color: gray;
+
+
+                &:hover {
+                    outline: none;
+                    caret-color: red;
+                }
+            }
+        }
+
+        &-media {
+            border: solid 1px black;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+
+            &-img {
+                width: 100%;
+            }
+        }
+
+        .make {
+            border: none;
+        }
+
+        &-details {
+            display: flex;
+            justify-content: space-between;
+
+            .btn {
+                border-radius: 50%;
+
+                &:hover {
+                    background-color: rgb(0, 148, 255);
+                }
+
+                &:active {
+                    border: none;
+                }
+
+                &:focus {
+                    border: none;
+                }
+            }
+        }
     }
 }
