@@ -5,6 +5,7 @@ namespace TwitterClone.Areas.Tweets.Controllers
     [Area("Tweets")]
     public class HomeController : Controller
     {
+
         // GET: HomeController
         [Route("/")]
         public ActionResult Index()
