@@ -25,10 +25,10 @@ namespace TwitterClone.Areas.Tweets.WebApi
 
         // GET: api/<ValuesController>
         [HttpGet("all")]
-        public async Task<ActionResult<TweetResponse>> GetAllTweet()
+        public List<TweetResponse> GetAllTweet()
         {
-            var response = await _tweetService.FetchAllTweets();
-            return Ok(response);
+            var response =  _tweetService.FetchAllTweets();
+            return response;
         }
 
         // GET api/<ValuesController>/5

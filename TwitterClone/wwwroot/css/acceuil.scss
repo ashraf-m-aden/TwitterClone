@@ -1,78 +1,147 @@
 ﻿.home {
     &-wrapper {
-        border-left: solid 1px rgb(128, 128, 128);
-        
+        border-left: solid 1px rgb(178, 174, 174, 0.25);
         border-right: solid 1px rgb(178, 174, 174, 0.25);
-        height: 100vh;
     }
 }
+
+
 .make-tweet {
     margin-top: 20px;
     padding: 15px;
-    justify-content: space-around;
     border-bottom: groove 1px;
     border-color: rgb(178, 174, 174, 0.25);
+    display: flex;
 
     &-profile {
-        width: 70px;
-        display: inline;
-    }
-
-    &-content {
-        &-wrapper{
-            width:100px;
-            border: solid 1px black;
-        }
-        min-width: 100%;
-        display: inline;
-        border: none;
-        padding: 10px;
-        overflow: hidden;
-        resize: both;
-        min-height: 40px;
-        line-height: 20px;
-
-        &:-webkit-autofill,
-        &:-webkit-autofill:hover,
-        &:-webkit-autofill:focus,
-        &:-webkit-autofill:active {
-            caret-color: #fff;
-        }
-
-        &:focus {
-            outline: none;
-            caret-color: red;
-        }
-
-        &:hover {
-            outline: none;
-            cursor: text;
-        }
-
-
-
-        &[contenteditable]:empty::before {
-            content: "Quoi de neuf??";
-            color: gray;
-            border: none;
-            outline: none;
+        &-img {
+            height: 70px;
+            border-radius: 50%;
         }
     }
 
-    &-btn {
-        width: 20%;
-        display: inline;
+    &-wrapper {
+        .make-tweet {
+            display: flex;
+            justify-content: space-between;
+
+
+
+            &-text {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+
+                &-content {
+                    min-width: 100%;
+                    display: block;
+                    border: none;
+                    overflow: hidden;
+                    resize: both;
+                    min-height: 40px;
+                    line-height: 20px;
+                    font-size: 20px;
+
+                    &:-webkit-autofill,
+                    &:-webkit-autofill:hover,
+                    &:-webkit-autofill:focus,
+                    &:-webkit-autofill:active {
+                        caret-color: #fff;
+                    }
+
+                    &:focus {
+                        outline: none;
+                        caret-color: red;
+                    }
+
+                    &:hover {
+                        outline: none;
+                        cursor: text;
+                    }
+
+
+
+                    &[contenteditable]:empty::before {
+                        content: "Quoi de neuf??";
+                        color: gray;
+                        border: none;
+                        outline: none;
+                    }
+                }
+            }
+
+            &-media {
+                border: solid black 1px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+
+                &-img {
+                    width: 100%;
+                }
+            }
+
+            &-details {
+                margin-bottom: 20px;
+
+                .upload {
+                    width: 20%;
+                    display: inline;
+                    border: none;
+                    background-color: transparent;
+                    width: auto;
+
+                    &:hover {
+                        border: none;
+                        background-color: rgb(138, 176, 237);
+                        border-radius: 10%;
+                    }
+
+                    &:active {
+                        border: none;
+                    }
+
+                    &:focus {
+                        border: none;
+                    }
+                }
+            }
+
+            &-send {
+                text-align: end;
+
+                .btn {
+                    width: 20%;
+                    display: inline;
+                    align-self: end;
+
+                    &:active {
+                        outline: none;
+                        border: none;
+                    }
+
+
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
     }
 }
 
 .tweet {
     border-bottom: groove 1px;
     border-color: rgb(178, 174, 174, 0.25);
+    display: flex;
 
     &-wrapper {
         display: flex;
         justify-content: left;
         padding: 20px;
+        border-bottom: groove 1px;
+        border-color: rgb(178, 174, 174, 0.25);
 
         &:hover {
             background-color: darkgray;

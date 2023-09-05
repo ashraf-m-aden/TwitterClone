@@ -10,7 +10,7 @@ namespace Interfaces
     public interface ITweetService
     {
         Task<TweetResponse> AddTweet(AddTweetRequest request);
-        Task<List<TweetResponse>> FetchAllTweets();
+        List<TweetResponse> FetchAllTweets();
         List<TweetResponse> FetchAllTweetsByIdUser(Guid id);
         List<TweetResponse> FetchAllTweetsByTag(string tag);
         TweetResponse FetchOneTweetByIdTweet(Guid id);

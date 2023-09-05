@@ -1,15 +1,22 @@
-﻿
-        <div class="tweet-wrapper">
-            <div class="tweet-profile">
+﻿@using Interfaces.DTO.Tweets;
+@model TweetResponse
+
+
+
+
+        <div class="tweet-wrapper ">
+            <div class="tweet-profile col-2">
                 <img src="~/img/profile.png" class="tweet-profile-img" />
             </div>
-            <div class="tweet-content">
+            <div class="tweet-content col-10 ">
                 <div class="tweet-content-info">
                     <span id="name" class="tweet-info-name">
-                        My Name 
+                        @Model.IdTweet
                     </span>
                     <span> @@Username</span>
-                    <span> ~ 30 Aout 2023</span>
+            <span>
+                ~                         @Model.CreatedTime
+            </span>
                 </div>
                 <p class="tweet-content-text">
                     

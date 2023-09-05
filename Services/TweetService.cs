@@ -38,10 +38,10 @@ namespace Services
 
         }
 
-        public async Task<List<TweetResponse>> FetchAllTweets()
+        public List<TweetResponse> FetchAllTweets()
         {
 
-            return _db.Tweets.Select(tw=>tw.ToTweetResponse()).ToList();  
+            return  _db.Tweets.Select(tw=>tw.ToTweetResponse()).ToList();  
         }
 
         public List<TweetResponse> FetchAllTweetsByIdUser(Guid id)

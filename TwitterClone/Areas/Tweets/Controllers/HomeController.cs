@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Entities;
+using Interfaces;
+using Interfaces.DTO.Tweets;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Services;
 
 namespace TwitterClone.Areas.Tweets.Controllers
 {
@@ -6,10 +11,20 @@ namespace TwitterClone.Areas.Tweets.Controllers
     public class HomeController : Controller
     {
 
+        private readonly ITweetService _tweetService;
+
+        public HomeController()
+        {
+            _tweetService = new TweetService(new TweetDbContext(
+                        new DbContextOptionsBuilder<TweetDbContext>().Options));
+        }
+
         // GET: HomeController
         [Route("/")]
         public ActionResult Index()
         {
+            ViewBag.tweetList = _tweetService.FetchAllTweets();
+            ViewBag.newTweet = new AddTweetRequest();
             return View();
         }
 

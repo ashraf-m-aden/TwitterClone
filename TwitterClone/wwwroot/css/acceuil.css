@@ -1,64 +1,112 @@
 ﻿.home-wrapper {
-  border-left: solid 1px rgb(128, 128, 128);
+  border-left: solid 1px rgba(178, 174, 174, 0.25);
   border-right: solid 1px rgba(178, 174, 174, 0.25);
-  height: 100vh;
 }
 
 .make-tweet {
   margin-top: 20px;
   padding: 15px;
-  justify-content: space-around;
   border-bottom: groove 1px;
   border-color: rgba(178, 174, 174, 0.25);
+  display: flex;
 }
-.make-tweet-profile {
-  width: 70px;
-  display: inline;
+.make-tweet-profile-img {
+  height: 70px;
+  border-radius: 50%;
 }
-.make-tweet-content {
+.make-tweet-wrapper .make-tweet {
+  display: flex;
+  justify-content: space-between;
+}
+.make-tweet-wrapper .make-tweet-text {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.make-tweet-wrapper .make-tweet-text-content {
   min-width: 100%;
-  display: inline;
+  display: block;
   border: none;
-  padding: 10px;
   overflow: hidden;
   resize: both;
   min-height: 40px;
   line-height: 20px;
+  font-size: 20px;
 }
-.make-tweet-content-wrapper {
-  width: 100px;
-  border: solid 1px black;
-}
-.make-tweet-content:-webkit-autofill, .make-tweet-content:-webkit-autofill:hover, .make-tweet-content:-webkit-autofill:focus, .make-tweet-content:-webkit-autofill:active {
+.make-tweet-wrapper .make-tweet-text-content:-webkit-autofill, .make-tweet-wrapper .make-tweet-text-content:-webkit-autofill:hover, .make-tweet-wrapper .make-tweet-text-content:-webkit-autofill:focus, .make-tweet-wrapper .make-tweet-text-content:-webkit-autofill:active {
   caret-color: #fff;
 }
-.make-tweet-content:focus {
+.make-tweet-wrapper .make-tweet-text-content:focus {
   outline: none;
   caret-color: red;
 }
-.make-tweet-content:hover {
+.make-tweet-wrapper .make-tweet-text-content:hover {
   outline: none;
   cursor: text;
 }
-.make-tweet-content[contenteditable]:empty::before {
+.make-tweet-wrapper .make-tweet-text-content[contenteditable]:empty::before {
   content: "Quoi de neuf??";
   color: gray;
   border: none;
   outline: none;
 }
-.make-tweet-btn {
+.make-tweet-wrapper .make-tweet-media {
+  border: solid black 1px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.make-tweet-wrapper .make-tweet-media-img {
+  width: 100%;
+}
+.make-tweet-wrapper .make-tweet-details {
+  margin-bottom: 20px;
+}
+.make-tweet-wrapper .make-tweet-details .upload {
   width: 20%;
   display: inline;
+  border: none;
+  background-color: transparent;
+  width: auto;
+}
+.make-tweet-wrapper .make-tweet-details .upload:hover {
+  border: none;
+  background-color: rgb(138, 176, 237);
+  border-radius: 10%;
+}
+.make-tweet-wrapper .make-tweet-details .upload:active {
+  border: none;
+}
+.make-tweet-wrapper .make-tweet-details .upload:focus {
+  border: none;
+}
+.make-tweet-wrapper .make-tweet-send {
+  text-align: end;
+}
+.make-tweet-wrapper .make-tweet-send .btn {
+  width: 20%;
+  display: inline;
+  align-self: end;
+}
+.make-tweet-wrapper .make-tweet-send .btn:active {
+  outline: none;
+  border: none;
+}
+.make-tweet-wrapper .make-tweet-send .btn:focus {
+  outline: none;
 }
 
 .tweet {
   border-bottom: groove 1px;
   border-color: rgba(178, 174, 174, 0.25);
+  display: flex;
 }
 .tweet-wrapper {
   display: flex;
   justify-content: left;
   padding: 20px;
+  border-bottom: groove 1px;
+  border-color: rgba(178, 174, 174, 0.25);
 }
 .tweet-wrapper:hover {
   background-color: darkgray;
